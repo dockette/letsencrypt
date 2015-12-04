@@ -6,20 +6,20 @@ Create 90 days SSL certificates for given domains.
 
 Container creates simple Nginx server listening on port 80 and waiting for letsencrypt validation.
 
-It handles only request to `domain/.well-known`, all other requests are forbidden. 
+It handles only request to `mydomain.com/.well-known`, all other requests are forbidden. 
 
 ```
 server {
-        listen 80;
-        server_name $DOMAINS;
+    listen 80;
+    server_name $DOMAINS;
 
-        location ^~ /.well-known/ {
-            root /var/www/acme-certs;
-        }
+    location ^~ /.well-known/ {
+        root /var/www/acme-certs;
+    }
 
-        location / {
-            return 403;
-        }
+    location / {
+        return 403;
+    }
 }
 ```
 

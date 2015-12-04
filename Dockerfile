@@ -11,7 +11,7 @@ RUN apt-get update && \
   apt-get install -y git nginx
 
 # Add overrided nginx configuration & default site
-ADD nginx.conf /etc/nginx
+ADD nginx.conf /etc/nginx/nginx.conf
 
 # Install LetsEncrypt to /srv/letsencrypt
 RUN mkdir $LE_PATH && git clone https://github.com/letsencrypt/letsencrypt $LE_PATH
