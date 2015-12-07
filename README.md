@@ -35,7 +35,7 @@ docker run
     --name le 
     -e DOMAINS='mydomain.com www.mydomain.com'
     -e EMAIL='my@email.tld'
-    dockette:letsencrypt
+    dockette/letsencrypt:latest
 ```
 
 You can add `-it` for interactive shell.
