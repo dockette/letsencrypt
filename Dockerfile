@@ -1,5 +1,5 @@
-# Based on Debian Jessie (8.2)
-FROM debian:8.2
+# Based on Debian Jessie
+FROM debian:jessie
 
 # Enviroments
 ENV DEBIAN_FRONTEND noninteractive
