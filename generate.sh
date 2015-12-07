@@ -3,7 +3,7 @@
 if [ -z "$DOMAINS" ] ; then
   echo "No domains set, please fill -e DOMAINS='example.com www.example.com'"
   exit 1
-fia
+fi
 
 if [ -z "$EMAIL" ] ; then
   echo "No email set, please fill -e EMAIL='your@email.tld'"
@@ -11,7 +11,7 @@ if [ -z "$EMAIL" ] ; then
 fi
 
 # Prepare args
-DARRAYS=(${DOMAINS});
+DARRAYS=(${DOMAINS})
 NGINX_DOMAINS=${DOMAINS}
 EMAIL_ADDRESS=${EMAIL}
 LE_DOMAINS=("${DARRAYS[*]/#/-d }")
