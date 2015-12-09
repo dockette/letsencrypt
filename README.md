@@ -29,12 +29,12 @@ server {
 ## Usage
 
 ```sh
-docker run 
-    -p 80:80 
-    -v /srv/certs/mydomain.com:/var/www/certs 
-    --name le 
-    -e DOMAINS='mydomain.com www.mydomain.com'
-    -e EMAIL='my@email.tld'
+docker run \
+    -p 80:80 \ 
+    -v /srv/certs/mydomain.com:/var/www/certs \
+    --name le \
+    -e DOMAINS='mydomain.com www.mydomain.com' \
+    -e EMAIL='my@email.tld' \
     dockette/letsencrypt:latest
 ```
 
