@@ -1,0 +1,19 @@
+name: "Docker Hub description"
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches: ["master"]
+    paths: ["README.md", ".github/workflows/dockerhub-description.yml"]
+
+  schedule:
+    - cron: "0 8 * * 1"
+
+jobs:
+  docs:
+    name: "Docs"
+    uses: dockette/.github/.github/workflows/dockerhub-description.yml@master
+    secrets: inherit
+    with:
+      image: "dockette/letsencrypt"
